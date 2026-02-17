@@ -1,0 +1,18 @@
+{
+  "compliance_score": "integer (0..100)",
+  "status": "PASS | FAIL",
+  "audit_log": [
+    {
+      "requirement_id": "FR-001 | FR-002 | FR-003 | FR-004",
+      "requirement": "string",
+      "met": "boolean",
+      "points_awarded": "integer",
+      "points_possible": "integer",
+      "comment": "string"
+    }
+  ],
+  "governance_check": "Compliant | Non-Compliant",
+  "outcome_orientation": "Feature-focused | Outcome-focused",
+  "critical_failures": ["FR-001 and/or FR-003 (or empty array)"],
+  "summary": "string (2–3 sentences)"
+}

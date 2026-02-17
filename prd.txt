@@ -1,0 +1,62 @@
+PRODUCT REQUIREMENTS DOCUMENT (PRD)
+======================================
+Project: Squad Empowerment – Decision Support Module
+Bank: Halyk Bank Super App
+Squad: Cross-functional product squad (Procurement Journey)
+Version: 1.0
+Date: 2026-02-17
+
+--------------------------------------
+CONTEXT
+--------------------------------------
+Product squads at Halyk Bank are formally organized as Agile teams but operate
+under Management Board–driven roadmaps, centralized discovery functions, and
+multi-committee approval gates. This creates a gap between squad accountability
+and squad authority.
+
+This PRD defines the minimum requirements for a Decision Support Module that
+enables squads to act as empowered product owners within defined risk boundaries.
+
+--------------------------------------
+JOB TO BE DONE (JTBD)
+--------------------------------------
+When I am responsible for improving a customer journey within the Halyk Super App,
+I want the ability to independently discover problems, test solutions, and make
+product decisions within defined risk boundaries,
+So that my squad can deliver measurable customer and business outcomes without
+excessive governance delays.
+
+--------------------------------------
+FUNCTIONAL REQUIREMENTS
+--------------------------------------
+
+REQUIREMENT 1 — Risk-Calibrated Escalation (ID: FR-001)
+  The module MUST analyze proposed product changes against predefined risk and
+  compliance rules. It MUST flag ONLY high-risk initiatives for committee
+  escalation. Low-risk and medium-risk changes must be auto-approved within the
+  squad's authority boundary. Flagging all changes for escalation regardless of
+  risk level is a CRITICAL FAILURE of this requirement.
+
+REQUIREMENT 2 — Explainable Recommendations (ID: FR-002)
+  The module MUST provide human-readable, explainable recommendations for each
+  decision. Each recommendation must reference the specific internal policy or
+  OKR it is aligned to. Generic or unexplained outputs are NOT acceptable.
+
+REQUIREMENT 3 — Real-Time Customer Signal Aggregation (ID: FR-003)
+  The module MUST aggregate real-time customer feedback, in-app behavioral data,
+  and usage signals. It MUST NOT rely solely on periodic Brand Health Tracking
+  reports (which are delayed by weeks). Absence of a real-time feedback
+  aggregation mechanism is a CRITICAL FAILURE of this requirement.
+
+REQUIREMENT 4 — OKR-to-Outcome Translation (ID: FR-004)
+  The module MUST translate high-level business OKRs into measurable product
+  outcomes. It must track customer impact metrics (e.g., task completion rate,
+  drop-off reduction) rather than feature delivery counts.
+
+--------------------------------------
+PASS / FAIL CRITERIA
+--------------------------------------
+- Score >= 75: PASS (squad may proceed with delivery)
+- Score < 75:  FAIL (escalation to Product Chapter required)
+- Any CRITICAL FAILURE in FR-001 or FR-003 automatically sets status to FAIL
+  regardless of total score.

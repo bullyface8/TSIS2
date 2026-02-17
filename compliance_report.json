@@ -1,0 +1,45 @@
+{
+  "compliance_score": 40,
+  "status": "FAIL",
+  "audit_log": [
+    {
+      "requirement_id": "FR-001",
+      "requirement": "Risk-Calibrated Escalation",
+      "met": false,
+      "points_awarded": 0,
+      "points_possible": 30,
+      "comment": "CRITICAL FAILURE: escalation_required is hardcoded to True, so all initiatives are escalated regardless of risk score. The PRD requires escalating only high-risk initiatives and auto-approving low/medium risk changes."
+    },
+    {
+      "requirement_id": "FR-002",
+      "requirement": "Explainable Recommendations",
+      "met": true,
+      "points_awarded": 20,
+      "points_possible": 20,
+      "comment": "Recommendations include a policy reference and OKR alignment, and provide a clear, human-readable output with a confidence level."
+    },
+    {
+      "requirement_id": "FR-003",
+      "requirement": "Real-Time Customer Signal Aggregation",
+      "met": false,
+      "points_awarded": 0,
+      "points_possible": 30,
+      "comment": "CRITICAL FAILURE: customer signals come from a static monthly Brand Health Tracking PDF source and the real-time stream is not connected, which is explicitly disallowed by the PRD."
+    },
+    {
+      "requirement_id": "FR-004",
+      "requirement": "OKR-to-Outcome Translation",
+      "met": true,
+      "points_awarded": 20,
+      "points_possible": 20,
+      "comment": "The OKR dashboard tracks outcome metrics (task completion rate, drop-off reduction, NPS delta) and explicitly disables feature count tracking."
+    }
+  ],
+  "governance_check": "Non-Compliant",
+  "outcome_orientation": "Outcome-focused",
+  "critical_failures": [
+    "FR-001",
+    "FR-003"
+  ],
+  "summary": "The submission fails because two critical requirements are not met: it escalates every initiative instead of only high-risk items, and it lacks real-time customer signal aggregation. Even though explainable recommendations and outcome tracking are present, the module does not meet the minimum autonomy and data requirements for deployment."
+}

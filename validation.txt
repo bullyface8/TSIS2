@@ -1,0 +1,6 @@
+The JSON output follows the required schema and includes one audit entry per FR requirement with points awarded 
+according to the weights. The agent correctly marked FR-001 and FR-003 as critical problems: 
+escalation is hardcoded to always go to committee, and customer signals come from a static monthly 
+Brand Health Tracking PDF instead of real-time data. With FR-001 treated as partial (15/30), FR-002 as partial (10/20), 
+FR-003 as missing (0/30), and FR-004 as complete (20/20), the total score is 40/100. Because FR-001 and 
+FR-003 are critical requirements in the PRD, the overall status is correctly set to FAIL and governance_check to Non-Compliant.
